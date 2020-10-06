@@ -17,7 +17,7 @@
   "homepage": "https://github.com/scimusmn/stele-lite",
   "dependencies": {
     "ebml": "^3.0.0",
-    "electron": "^9.2.0",
+    "electron": "^9.3.0",
     "fluent-ffmpeg": "^2.1.2",
     "path": "^0.12.7",
     "serialport": "^8.0.0",
