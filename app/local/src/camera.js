@@ -1,4 +1,8 @@
+const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
+
 obtain(['fs','fluent-ffmpeg', 'path'], (fs, ffmpeg, path)=> {
+  ffmpeg.setFfmpegPath(ffmpegPath);
+
   console.log(fs);
   if (!customElements.get('cam-era')) {
 
