@@ -23,6 +23,7 @@ obtain(['µ/serial.js'], (ser)=> {
     };
 
     _this.sendPacket = (arr, print)=> {
+      //arr = arr.map(val=>parseInt(val));
       arr[0] |= 0b10000000;
       arr.push(arr.reduce((acc, val)=>acc + val, 0) & 0b01111111);
       arr.push(START_FLAG + STOP_FLAG);

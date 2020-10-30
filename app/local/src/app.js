@@ -193,7 +193,7 @@ obtain(obtains, ({ LightControl }, {Camera}, {ProgressRing}, os, path)=> {
       for(var i=1; i<5; i++){
         pins.push(µ(`#quad${i}`).checked?1:0);
       }
-      control.stimulate(freqSelect.value, ampSelect.value, lenSelect.value, pins);
+      control.stimulate(parseInt(freqSelect.value), parseInt(ampSelect.value), parseInt(lenSelect.value), pins);
       control.setBacklight(backlight.value);
       control.setOutputs(rightOdor.value | leftOdor.value);
     }

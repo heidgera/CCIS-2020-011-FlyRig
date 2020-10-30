@@ -25,6 +25,11 @@ obtain(['µ/serialParser.js', 'events', 'µ/utilities.js'], ({ serialParser }, E
         console.log('set back light');
       });
 
+
+      parser.on(STIMULATE, (data)=> {
+        console.log('stimulate');
+      });
+
       var readyInt;
 
       parser.on(READY, ()=> {
@@ -38,6 +43,7 @@ obtain(['µ/serialParser.js', 'events', 'µ/utilities.js'], ({ serialParser }, E
 
       _this.stimulate = (frequency,amplitude,pulseLength,quadArray)=>{
         var quads = quadArray.reduce((acc,val,ind)=>acc + (val << ind));
+        console.log([1, STIMULATE, frequency, amplitude, pulseLength, quads]);
         parser.sendPacket([1, STIMULATE, frequency, amplitude, pulseLength, quads]);
       }
 
