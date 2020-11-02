@@ -18,13 +18,13 @@
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.0.20",
     "ebml": "^3.0.0",
-    "electron": "^9.2.0",
     "fluent-ffmpeg": "^2.1.2",
     "path": "^0.12.7",
     "serialport": "^8.0.0",
     "uvc-control": "^1.0.2"
   },
   "devDependencies": {
+    "electron": "^9.2.0",
     "electron-builder": "^22.7.0",
     "electron-rebuild": "^1.11.0"
   },
@@ -35,7 +35,11 @@
     },
     "win": {
       "target": "portable",
-      "icon": "build/img/icon.ico"
+      "icon": "build/img/icon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/img/icon.png"
     },
     "npmRebuild": "false"
   }
