@@ -178,11 +178,13 @@ obtain(obtains, ({ LightControl }, {Camera}, {ProgressRing}, os, path)=> {
     blRange.onchange = (e)=>{
       var _this = e.target;
       backlight.value = _this.value;
+      control.setBacklight(backlight.value);
     }
 
     backlight.onchange = (e)=>{
       var _this = e.target;
       blRange.value = _this.value;
+      control.setBacklight(backlight.value);
     }
 
 
@@ -194,13 +196,13 @@ obtain(obtains, ({ LightControl }, {Camera}, {ProgressRing}, os, path)=> {
         pins.push(µ(`#quad${i}`).checked?1:0);
       }
       control.stimulate(parseInt(freqSelect.value), parseInt(ampSelect.value), parseInt(lenSelect.value), pins);
-      control.setBacklight(backlight.value);
+      //control.setBacklight(backlight.value);
       control.setOutputs(rightOdor.value | leftOdor.value);
     }
 
     var manualOff = ()=>{
       control.stimulate(0, 0, 0, [0,0,0,0]);
-      control.setBacklight(0);
+      //control.setBacklight(0);
       control.setOutputs(0);
     }
 
