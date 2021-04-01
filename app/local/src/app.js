@@ -364,7 +364,7 @@ obtain(obtains, ({ LightControl }, {Camera}, {ProgressRing}, os, path)=> {
         cues.stop();
         recordStop();
         control.stimulate(0, 0, 0, [0,0,0,0]);
-        control.setBacklight(0);
+        //control.setBacklight(0);
         control.setOutputs(0);
       });
       recordStart();
@@ -375,7 +375,7 @@ obtain(obtains, ({ LightControl }, {Camera}, {ProgressRing}, os, path)=> {
       cues.stop();
       recordStop();
       control.stimulate(0, 0, 0, [0,0,0,0]);
-      control.setBacklight(0);
+      //control.setBacklight(0);
       control.setOutputs(0);
     }
 
