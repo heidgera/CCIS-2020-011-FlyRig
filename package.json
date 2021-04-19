@@ -1,16 +1,16 @@
 {
-  "name": "FlowControl",
+  "name": "FlyRig",
   "version": "1.0.0",
-  "description": "Flow Chamber Temperature Controller",
+  "description": "Fly behavior recording rig",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "install": "electron-rebuild -v 3.1.13",
+    "install": "electron-rebuild",
     "dist": "electron-builder build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scimusmn/stele-lite.git"
+    "url": "git+https://github.com/heidgera/CCIS-2020-011-FlyRig.git"
   },
   "author": "ajhg",
   "license": "CC0-1.0",
@@ -20,13 +20,13 @@
     "ebml": "^3.0.0",
     "fluent-ffmpeg": "^2.1.2",
     "path": "^0.12.7",
-    "serialport": "^8.0.0",
+    "serialport": "^9.0.6",
     "uvc-control": "^1.0.2"
   },
   "devDependencies": {
-    "electron": "^9.2.0",
+    "electron": "^11.2.0",
     "electron-builder": "^22.7.0",
-    "electron-rebuild": "^1.11.0"
+    "electron-rebuild": "^2.3.4"
   },
   "build": {
     "appId": "com.ccis.tcafc",

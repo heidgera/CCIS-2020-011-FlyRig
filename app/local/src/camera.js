@@ -126,11 +126,11 @@ obtain(['fs','fluent-ffmpeg', 'path'], (fs, ffmpeg, path)=> {
             console.log("convert")
             var command = ffmpeg(inter).noAudio().videoCodec('copy');//.fps(30)
 
-            for (var key in _this.metadata) {
-              if (_this.metadata.hasOwnProperty(key)) {
-                command.outputOptions('-metadata', `"${key}"="${_this.metadata[key]}"`);
-              }
-            }
+            // for (var key in _this.metadata) {
+            //   if (_this.metadata.hasOwnProperty(key)) {
+            //     command.outputOptions('-metadata', `"${key}"="${_this.metadata[key]}"`);
+            //   }
+            // }
 
             command.on('stderr', function(stderrLine) {
               console.log('Stderr output: ' + stderrLine);
@@ -147,7 +147,7 @@ obtain(['fs','fluent-ffmpeg', 'path'], (fs, ffmpeg, path)=> {
             })
 
 
-            command.save(`${basePath}_${(new Date()).toISOString().replace(/:|-|\./g,'_')}.mkv`);
+            command.save(`${basePath}_${(new Date()).toISOString().replace(/:|-|\./g,'_')}.mp4`);
           }
         });
 
